@@ -1,0 +1,7 @@
+<block wx:for="{{historylist}}" wx:key='id' >
+  <view class='history-container'>
+    <view class='history-text'><text class='history-title'>{{item.date}}</text><text class='history-title' style='float:right'> {{item.title}}</text></view>
+    <image src='{{item.imageurl}}' class='history-image'></image>
+    <view ><text class='history-desc'>{{item.desc}}</text></view>
+  </view>
+</block>

@@ -1,0 +1,39 @@
+/* pages/classlist/classlist.wxss */
+
+.part-title::after{
+  position: absolute;
+  width: 10rpx;
+  height: 40rpx;
+  content: "";
+  left: 20rpx;
+  top: 17rpx;
+  background: #444444;
+}
+
+.part-title{
+  position: relative;
+  font-size: 36rpx;
+  line-height: 1.5;
+  color: #444444;
+  padding: 10rpx 20rpx;
+  text-indent: 20rpx;
+}
+
+.part-content{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+  
+}
+
+.part-item{
+  border: 1rpx solid #444444;
+  height: 80rpx;
+  width: 160rpx;
+  border-radius: 10rpx;
+  margin-right: 10rpx;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  display: block;
+}

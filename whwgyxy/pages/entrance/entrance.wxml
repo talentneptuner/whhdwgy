@@ -1,0 +1,18 @@
+<!--pages/entrance/entrance.wxml-->
+<view class='container'>
+    <view class='choose-container'>
+    <text class='choose' bindtap='ToHistory'>海淀历史介绍</text>
+    </view>
+     <view class='choose-container'>
+     <text class='choose' bindtap='ToMap'>海淀小地图</text>
+    </view>
+     <view class='choose-container'>
+     <text class='choose' bindtap='ToApartment'>海淀部门介绍</text>
+    </view>
+     <view class='choose-container'>
+     <text class='choose' bindtap='ToClassList'>海淀班级介绍</text>
+    </view>
+</view>
+
+
+

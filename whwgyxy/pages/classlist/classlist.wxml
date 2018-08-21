@@ -1,0 +1,10 @@
+<!--pages/classlist/classlist.wxml-->
+
+  <view class='part'>
+    <view class='part-title'>初中部</view><hr></hr>
+      <view class='part-content'>
+        <view class='part-item'></view>
+        
+      </view>  
+  </view>
+

@@ -1,0 +1,19 @@
+<!--pages/sightdetail/sightdetail.wxml-->
+
+  <view class='image_container'>
+    <swiper indicator-dots='true' autoplay='true' interval='5000' >
+      <block wx:for="{{imagelist}}">
+        <swiper-item>
+          <image src='{{item}}' class='sight_image'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='title'>{{title}}</view>
+  <view class='line'></view>
+  <view class='desc_container'>
+    <view class='desc'>
+      {{desc}}
+    </view>
+  </view>
+

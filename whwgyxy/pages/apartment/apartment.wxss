@@ -1,0 +1,36 @@
+/* pages/apartment/apartment.wxss */
+.part{
+  margin-top: 50rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.part-title{
+  background: #ccc;
+  margin-top: 3rpx;
+  height: 50rpx;
+  border-top-left-radius: 5rpx;
+  border-top-right-radius: 5rpx;
+}
+.title{
+  font-family: Microsoft YaHei;
+  margin-left: 20rpx;
+  line-height: 45rpx
+}
+.part-content{
+  margin-top: 0px;
+  background: rgba(238, 238, 238, 0.6);
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom-left-radius: 5rpx;
+  border-bottom-right-radius: 5rpx;
+}
+.part-node{
+  width: 25%;
+  margin: 4rpx;
+  padding: 1rpx 0;
+  border: 1rpx solid #ccc;
+  text-align: center;
+  border-radius: 4rpx;
+  background: #fff;
+  font-size: 30rpx;
+}

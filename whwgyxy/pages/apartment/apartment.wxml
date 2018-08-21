@@ -1,0 +1,25 @@
+<!--pages/apartment/apartment.wxml-->
+<view class='part'>
+  <view class='part-title'>
+    <text class='title'>管理层</text>
+  </view>
+  <view class='part-content'>
+    <view class='part-container'>
+      <view class='part-node'>
+        <text>董事会</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='part'>
+  <view class='part-title'>
+    <text class='title'>管理层</text>
+  </view>
+  <view class='part-content'>
+    <view class='part-container'>
+      <view class='part-node'>
+        <text>董事会</text>
+      </view>
+    </view>
+  </view>
+</view>

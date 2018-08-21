@@ -1,0 +1,51 @@
+/* pages/history/history.wxss */
+
+.history-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 1px 1px 10px 1px #eeee;
+  margin-bottom: 15px;
+  background: #ffffff;
+  border-radius: 7rpx;
+  
+}
+
+.history-text{
+  font-family: Microsoft-YaHei;
+  font-size: 34rpx;
+  color: #444444;
+  padding: 10rpx 20rpx;
+  /* text-indent: 20rpx; */
+  font-weight: bold;
+  
+}
+
+/* .history-text::after{
+  position: absolute;
+  width: 10rpx;
+  height: 44rpx;
+  content: "";
+  left: 20rpx;
+  top: 17rpx;
+  background: #444444
+} */
+
+.history-image{
+  width: 100%;
+  border-radius: 5rpx;
+  margin-bottom: 10px;
+}
+
+.history-desc{
+  text-indent: 20rpx;
+  text-align: left;
+  font-size: 26rpx;
+  line-height: 1.2;
+}
+
+page{
+  background: #eeeeee
+}

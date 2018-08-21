@@ -1,0 +1,77 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.1",
+	"appid": "wx5a0b21fd98416f35",
+	"projectname": "whwgyxy",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": -1,
+					"name": "entrance",
+					"pathName": "pages/entrance/entrance",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "entrance",
+					"pathName": "pages/classlist/classlist",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "history",
+					"pathName": "pages/history/history",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "map",
+					"pathName": "pages/map/map",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "sightdetail",
+					"pathName": "pages/sightdetail/sightdetail",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "apartment",
+					"pathName": "pages/apartment/apartment",
+					"query": ""
+				}
+			]
+		}
+	}
+}
