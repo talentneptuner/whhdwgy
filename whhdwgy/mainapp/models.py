@@ -24,32 +24,23 @@ class Part(models.Model):
     # up_node = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True)
     cataglory = models.CharField(choices=(('sc', '领导层'), ('zn', '职能部门'), ('jx', '教学部')), default='zn', max_length=10)
     addtime = models.DateTimeField(verbose_name="添加时间", default=datetime.now)
+    clickable = models.BooleanField(verbose_name='可点击',default=False)
 
     class Meta:
-        verbose_name = '职能层'
+        verbose_name = '部门'
         verbose_name_plural = verbose_name
 
     def __str__(self):
         return self.name
 
 
-class PartNode(models.Model):
-    name = models.CharField(verbose_name="姓名", default='无内容', max_length=50)
-    part = models.ForeignKey(Part, verbose_name="所属分类", null=True, blank=True, on_delete=models.CASCADE)
-    addtime = models.DateTimeField(verbose_name="添加时间", default=datetime.now)
 
-    class Meta:
-        verbose_name = "职能部"
-        verbose_name_plural = verbose_name
-
-    def __str__(self):
-        return self.name
 
 
 class Person(models.Model):
     name = models.CharField(verbose_name="姓名", default='xxx', max_length=50)
     image = models.ImageField(verbose_name='照片', null=True, blank=True, upload_to="person/%Y/%m")
-    partnode = models.ForeignKey(PartNode, verbose_name="所属部门", null=True, blank=True, on_delete=models.CASCADE)
+    partnode = models.ForeignKey(Part, verbose_name="所属部门",null=True,blank=True, on_delete=models.CASCADE)
     addtime = models.DateTimeField(verbose_name="添加时间", default=datetime.now)
 
     class Meta:

@@ -63,6 +63,17 @@ Page({
         }
       }
     })
+  },
+  ToVR: function() {
+    wx.setClipboardData({
+      data: 'https://720yun.com/t/8554wedgawseg5oqc4?pano_id=FvkBhRqJpUOMU3bT',
+      success: function(res){
+        // console.log(res.data)
+        wx.showToast({
+          title: '链接已复制',
+        })
+      }
+    })
   }
 
   

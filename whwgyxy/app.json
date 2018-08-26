@@ -7,7 +7,8 @@
     "pages/apartment/apartment",
     "pages/classlist/classlist",
     "pages/map/map",
-    "pages/sightdetail/sightdetail"
+    "pages/sightdetail/sightdetail",
+    "pages/teachers/teachers"
   ],
   "window": {
     "backgroundTextStyle": "light",

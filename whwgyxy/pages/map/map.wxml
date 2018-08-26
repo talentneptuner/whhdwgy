@@ -10,5 +10,5 @@
     </view>
     <!-- </block> -->
   </scroll-view>
-  <view class='vr-go'><text>VR\n校园</text></view>
+  <view class='vr-go' bindtap='ToVR'><text>VR\n校园</text></view>
 </view>

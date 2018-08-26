@@ -6,7 +6,7 @@ from django.views.generic.base import View
 from django.db.models import Q
 from django.http import HttpResponse, HttpResponseRedirect
 
-from .models import History, Sight, SightImage, Part
+from .models import History, Sight, SightImage, Part, Person
 
 
 # Create your views here.
@@ -77,4 +77,17 @@ class PartView(View):
             a_list.append(dict_temp)
         dict_3 = dict(id=2, name='教学部', list=a_list)
         result.append(dict_3)
+        return HttpResponse(json.dumps(result, ensure_ascii=False), content_type='application/json')
+
+
+class PersonView(View):
+
+    def get(self, request, id):
+        part = Part.objects.get(id=id)
+        result_teachers = Person.objects.filter(partnode=part)
+        teachers = []
+        for item in result_teachers:
+            dict_temp = dict(id=item.id, name=item.name, image='http://localhost:8000/media/' + str(item.image))
+            teachers.append(dict_temp)
+        result = dict(id=part.id,teachers=teachers,click = part.clickable,title = part.name)
         return HttpResponse(json.dumps(result, ensure_ascii=False), content_type='application/json')

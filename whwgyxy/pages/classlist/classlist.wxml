@@ -1,10 +1,30 @@
 <!--pages/classlist/classlist.wxml-->
 
-  <view class='part'>
-    <view class='part-title'>初中部</view><hr></hr>
-      <view class='part-content'>
-        <view class='part-item'></view>
-        
-      </view>  
+ <view class='header'>
+  <image class='header-img' src='http://localhost:8000/media/others/D4.png'></image>
+  <text class='header-title'>班级列表</text>
+  </view>
+  <view class='manage-desc'>
+    <block wx:for="{{grades}}" wx:for-item="item" wx:key="id">
+      <view class='part'>
+        <view class='part-title' bindtap='showContent' data-id='{{item.id}}'>
+          <text class='title'>{{item.name}}</text>
+        </view>
+        <block wx:if="{{item.show}}">
+          <view class='part-content'>
+            <view class='part-container'>
+              <block wx:if='{{item.classlist.length}}'>
+                <view class='part-node' wx:for="{{item.classlist}}" wx:for-item="one" wx:key="id" data-id='{{one.id}}' bindtap='ToTeachers'>
+                  <view class='node-name'><text>{{one.name}}</text></view>
+                </view>
+              </block>
+              <block wx:else>
+                <text style='margin-left:30rpx;font-size:30rpx'>该年级暂无数据</text>
+              </block>
+            </view>
+          </view>
+        </block>
+      </view>
+    </block>
   </view>
 

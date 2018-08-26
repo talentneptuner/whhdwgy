@@ -1,0 +1,10 @@
+<!--pages/teachers/teachers.wxml-->
+<view class='header'>
+  <image class='header-img' src='http://localhost:8000/media/others/D4.png'></image>
+  <text class='header-title'>职工风采<text style='font-size:30rpx'>({{name}})</text></text>
+  </view>
+<view class='view-container'>
+  <view class='img-container' wx:for='{{list}}' wx:key='id'>
+    <image class='teacher-img' src='{{item.image}}' mode='widthFix'></image>
+  </view>
+</view>

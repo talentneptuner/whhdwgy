@@ -1,21 +1,22 @@
 <!--pages/apartment/apartment.wxml-->
-<view class='header'>
-<image class='header-img' src='http://localhost:8000/media/others/D4.png'></image>
-<text class='header-title'>部门介绍</text>
-</view>
-<view class='manage-desc'>
-  <block wx:for="{{list}}" wx:for-item="item" wx:key="id">
-    <view class='part'>
-      <view class='part-title'>
-        <text class='title'>{{item.name}}</text>
-      </view>
-      <view class='part-content'>
-        <view class='part-container'>
-          <view class='part-node' wx:for="{{item.list}}" wx:for-item="one" wx:key="id">
-            <text class='node-name'>{{one.name}}</text>
+
+  <view class='header'>
+  <image class='header-img' src='http://localhost:8000/media/others/D4.png'></image>
+  <text class='header-title'>部门介绍</text>
+  </view>
+  <view class='manage-desc'>
+    <block wx:for="{{list}}" wx:for-item="item" wx:key="id">
+      <view class='part'>
+        <view class='part-title'>
+          <text class='title'>{{item.name}}</text>
+        </view>
+        <view class='part-content'>
+          <view class='part-container'>
+            <view class='part-node' wx:for="{{item.list}}" wx:for-item="one" wx:key="id" data-id='{{one.id}}' bindtap='ToTeachers'>
+              <view class='node-name'><text>{{one.name}}</text></view>
+            </view>
           </view>
         </view>
       </view>
-    </view>
-  </block>
-</view>
+    </block>
+  </view>

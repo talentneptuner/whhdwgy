@@ -20,13 +20,17 @@ import xadmin
 
 from .settings import MEDIA_ROOT
 
-from mainapp.views import HistoryView,SightView,SightInfoView,PartView
+from mainapp.views import HistoryView, SightView, SightInfoView, PartView, PersonView
+from classes.views import getClassListView,getClassInfoView
 
 urlpatterns = [
-    path('xadmin/', xadmin.site.urls),
+    path('', xadmin.site.urls),
     re_path('media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
     path('gethistory/', HistoryView.as_view()),
-    path('getsights/',SightView.as_view()),
-    path('getsightinfo/<str:id>',SightInfoView.as_view()),
-    path('getparts/',PartView.as_view()),
+    path('getsights/', SightView.as_view()),
+    path('getsightinfo/<str:id>', SightInfoView.as_view()),
+    path('getparts/', PartView.as_view()),
+    path('getteachers/<str:id>', PersonView.as_view()),
+    path('getgrade/', getClassListView.as_view()),
+    path('getclassinfo/<str:id>', getClassInfoView.as_view()),
 ]

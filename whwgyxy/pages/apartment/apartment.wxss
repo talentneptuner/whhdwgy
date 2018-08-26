@@ -42,7 +42,6 @@
   line-height: 45rpx
 }
 .part-content{
-  margin-top: 0px;
   background: rgba(238, 238, 238, 0.6);
   padding-top: 20rpx;
   padding-bottom: 20rpx;
@@ -55,14 +54,14 @@
   width: 100%;
 }
 .part-node{
-  width: 160rpx;
+  width: 160px;
+  float: left;
   margin: 4px;
   padding: 1rpx 0;
   border: 1rpx solid #ccc;
   text-align: center;
   border-radius: 10rpx;
   background: #fff;
-  display: inline-block;
 }
 
 .node-name{

@@ -2,7 +2,7 @@ import xadmin
 
 from xadmin import views
 
-from mainapp.models import History, PartNode, Part, Person, SightImage
+from mainapp.models import History,  Part, Person, SightImage
 
 
 class HistoryAdmin(object):
@@ -24,7 +24,16 @@ xadmin.site.register(SightImage, SightImageAdmin)
 class PartAdmin(object):
     list_display = ['name', 'cataglory']
 
-xadmin.site.register(Part,PartAdmin)
+
+xadmin.site.register(Part, PartAdmin)
+
+
+class PersonAdmin(object):
+    list_display = ['name', 'partnode']
+    list_filter = ['partnode']
+
+
+xadmin.site.register(Person, PersonAdmin)
 
 
 class GlobalSettings(object):
