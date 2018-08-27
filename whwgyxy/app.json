@@ -8,7 +8,8 @@
     "pages/classlist/classlist",
     "pages/map/map",
     "pages/sightdetail/sightdetail",
-    "pages/teachers/teachers"
+    "pages/teachers/teachers",
+    "pages/class/class"
   ],
   "window": {
     "backgroundTextStyle": "light",

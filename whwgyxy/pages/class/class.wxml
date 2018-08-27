@@ -1,0 +1,36 @@
+<!--pages/class/class.wxml-->
+<view class='header'>
+  <image class='header-img' src='http://localhost:8000/media/others/D4.png'></image>
+  <text class='header-title'>高一一班</text>
+  </view>
+<view class='nav'>
+  <view class='{{desc_class}}' style='border-left:0' bindtap='showdesc'>班级简介</view>
+  <view class='{{image_class}}' bindtap='showimage'>班级风采</view>
+  <view class='{{course_class}}' bindtap='showcourse'>课程设置</view>
+  <view class='{{prize_class}}' bindtap='showprize'>班级奖项</view>
+</view>
+<view wx:if="{{show_desc}}">
+  <view class='desc-container' wx:for="{{info.desc}}">
+    <text class='desc'>{{item}}</text>
+  </view>
+</view>
+<view wx:if="{{show_image}}">
+  <block wx:for="{{info.images}}" wx:key='id' >
+    <view class='image-container'>
+      <image src='{{item.image}}' class='image-image'></image>
+      <view class='image-desc-container' ><text class='image-desc'>{{item.desc}}</text></view>
+    </view>
+  </block>
+</view>
+<view wx:if="{{show_course}}">
+  <view class='desc-container' wx:for="{{info.course}}">
+    <text class='desc'>{{item}}</text>
+  </view>
+</view>
+
+<view wx:if="{{show_prize}}">
+  <view class='desc-container' wx:for="{{info.prizes}}">
+    <text class='desc'>{{item}}</text>
+  </view>
+</view>
+
