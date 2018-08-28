@@ -9,6 +9,7 @@ class HistoryAdmin(object):
     list_display = ['date', 'title', 'addtime']
     readonly_fields = ['addtime']
     ordering = ['-addtime']
+    model_icon = 'fa fa-clock-o'
 
 
 xadmin.site.register(History, HistoryAdmin)
@@ -16,6 +17,7 @@ xadmin.site.register(History, HistoryAdmin)
 
 class SightImageAdmin(object):
     list_display = ['image', 'sight']
+    model_icon = 'fa fa-plane'
 
 
 xadmin.site.register(SightImage, SightImageAdmin)
@@ -23,6 +25,7 @@ xadmin.site.register(SightImage, SightImageAdmin)
 
 class PartAdmin(object):
     list_display = ['name', 'cataglory']
+    model_icon = 'fa fa-briefcase'
 
 
 xadmin.site.register(Part, PartAdmin)
@@ -31,6 +34,7 @@ xadmin.site.register(Part, PartAdmin)
 class PersonAdmin(object):
     list_display = ['name', 'partnode']
     list_filter = ['partnode']
+    model_icon = 'fa fa-users'
 
 
 xadmin.site.register(Person, PersonAdmin)

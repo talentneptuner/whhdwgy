@@ -37,6 +37,6 @@ class getClassInfoView(View):
         for item2 in images:
             imagelist.append(
                 dict(id=item2.id, desc=item2.desc, image='http://localhost:8000/media/' + str(item2.image)))
-        result = dict(id=classinfo.id, name=classinfo.name, desc=classinfo.desc.split('\r'), course=classinfo.course.split('\r'),
+        result = dict(id=classinfo.id, name=classinfo.name, desc=classinfo.desc.split('\r\n'), course=classinfo.course.split('\r\n'),
                       prizes=reprize, images=imagelist)
         return HttpResponse(json.dumps(result, ensure_ascii=False), content_type='application/json')

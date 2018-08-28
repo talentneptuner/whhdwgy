@@ -8,6 +8,7 @@ from .models import Grade, ClassOne, ClassImage, Prize
 class GradeAdmin(object):
     list_display = ['name']
     ordering = ['-addtime']
+    model_icon = 'fa fa-graduation-cap'
 
 
 class ClassoneAdmin(object):

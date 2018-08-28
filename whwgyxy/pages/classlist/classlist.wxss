@@ -40,7 +40,8 @@
 .title{
   font-family: Microsoft YaHei;
   margin-left: 20rpx;
-  line-height: 45rpx
+  line-height: 45rpx;
+  color: #666
 }
 .part-content{
   background: rgba(238, 238, 238, 0.6);

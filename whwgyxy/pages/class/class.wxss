@@ -50,6 +50,8 @@
 .desc-container{
   display: block;
   text-indent: 44rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
 }
 .desc{
   font-size: 26rpx;

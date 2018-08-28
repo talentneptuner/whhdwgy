@@ -11,20 +11,20 @@
 </view>
 <view wx:if="{{show_desc}}">
   <view class='desc-container' wx:for="{{info.desc}}">
-    <text class='desc'>{{item}}</text>
+    <text class='desc'>{{item}}\n\n</text>
   </view>
 </view>
 <view wx:if="{{show_image}}">
   <block wx:for="{{info.images}}" wx:key='id' >
     <view class='image-container'>
-      <image src='{{item.image}}' class='image-image'></image>
+      <image src='{{item.image}}' class='image-image' mode='widthFix'></image>
       <view class='image-desc-container' ><text class='image-desc'>{{item.desc}}</text></view>
     </view>
   </block>
 </view>
 <view wx:if="{{show_course}}">
   <view class='desc-container' wx:for="{{info.course}}">
-    <text class='desc'>{{item}}</text>
+    <text class='desc'>{{item}}\n\n</text>
   </view>
 </view>
 

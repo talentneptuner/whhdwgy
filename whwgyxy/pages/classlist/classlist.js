@@ -42,5 +42,11 @@ Page({
     that.setData({
       grades:g_list
     })
+  },
+  ToClass: function(res){
+    var id = res.currentTarget.dataset.cid;
+    wx.navigateTo({
+      url: '/pages/class/class?id='+id,
+    })
   }
 })

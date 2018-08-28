@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<image src='/images/fenbu.jpg'></image>
+<image src='/images/fenbu.jpg' mode='widthFix'></image>
 <view class="container">
   <view class='title-container' bindtap='ToEntrance'>
     <text class='title'>武汉海淀外国语学校</text>

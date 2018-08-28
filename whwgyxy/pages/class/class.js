@@ -22,8 +22,9 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    var id = options.id
     wx.request({
-      url: 'http://localhost:8000/getclassinfo/1',
+      url: 'http://localhost:8000/getclassinfo/'+id,
       method: 'GET',
       header: {
         'content-type': 'application/json'

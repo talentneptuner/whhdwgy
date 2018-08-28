@@ -14,7 +14,7 @@
           <view class='part-content'>
             <view class='part-container'>
               <block wx:if='{{item.classlist.length}}'>
-                <view class='part-node' wx:for="{{item.classlist}}" wx:for-item="one" wx:key="id" data-id='{{one.id}}' bindtap='ToTeachers'>
+                <view class='part-node' wx:for="{{item.classlist}}" wx:for-item="one" wx:key="id" data-cid='{{one.id}}' bindtap='ToClass'>
                   <view class='node-name'><text>{{one.name}}</text></view>
                 </view>
               </block>
