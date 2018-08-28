@@ -16,7 +16,7 @@
 </view>
 <view wx:if="{{show_image}}">
   <block wx:for="{{info.images}}" wx:key='id' >
-    <view class='image-container'>
+    <view class='image-container' data-id='{{item.id}}' bindlongpress='saveAction' bindtap='previewImages'>
       <image src='{{item.image}}' class='image-image' mode='widthFix'></image>
       <view class='image-desc-container' ><text class='image-desc'>{{item.desc}}</text></view>
     </view>

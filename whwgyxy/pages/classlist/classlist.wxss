@@ -31,20 +31,20 @@
   margin-right: 10rpx;
 }
 .part-title{
-  background: #ccc;
+  background: #eee;
   margin-top: 3rpx;
-  height: 60rpx;
+  height: 80rpx;
   border-top-left-radius: 5rpx;
   border-top-right-radius: 5rpx;
 }
 .title{
-  font-family: Microsoft YaHei;
+  font-family: SimHei;
   margin-left: 20rpx;
-  line-height: 45rpx;
-  color: #666
+  line-height: 80rpx;
+  color: #3c3c3c;
 }
 .part-content{
-  background: rgba(238, 238, 238, 0.6);
+  background: rgba(252, 252, 252, 0.6);
   padding-top: 20rpx;
   padding-bottom: 20rpx;
   border-bottom-left-radius: 5rpx;
