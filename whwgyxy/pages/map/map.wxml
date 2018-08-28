@@ -5,7 +5,7 @@
     <!-- <view style="position:absolute;left:800px;top:800px;height:10px;width:10px"></<view> -->
     <!-- <block wx:for='{{sightlist}}' wx:key="id"> -->
     <view style="position:absolute;left:{{item.left}}px;top:{{item.top}}px;text-align:center" bindtap='show' wx:for='{{sightlist}}' wx:key="id"  data-name='{{item.name}}' data-id='{{item.id}}' class='animate-bounce-up'>
-    <view style='width:50px' class='name'><text style='font-size:20rpx'>{{item.name}}</text></view>
+    <view style='width:50px' class='name'><text style='font-size:10px'>{{item.name}}</text></view>
     <image style='height:28px;width:16px' src='/images/marker.png'></image>
     </view>
     <!-- </block> -->

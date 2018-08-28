@@ -161,11 +161,13 @@ Page({
                   success:function(res){
                     wx.showToast({
                       title: '保存成功',
+                      icon:'none',
                     })
                   },
                   fail:function(res){
                     wx.showToast({
                       title: '保存失败',
+                      icon:'none'
                     })
                   }
                 })
