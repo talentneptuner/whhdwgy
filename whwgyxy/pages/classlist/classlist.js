@@ -38,7 +38,6 @@ Page({
     var id = res.currentTarget.dataset.id;
     var aid = id-1;
     g_list[aid].show = g_list[aid].show?false:true;
-    // console.log(g_list)
     that.setData({
       grades:g_list
     })

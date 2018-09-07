@@ -29,8 +29,11 @@
 </view>
 
 <view wx:if="{{show_prize}}">
-  <view class='desc-container' wx:for="{{info.prizes}}">
-    <text class='desc'>{{item}}</text>
-  </view>
+  <block wx:for="{{info.prizes}}" wx:key='id' >
+    <view class='image-container'>
+      <image src='{{item.image}}' class='image-image' mode='widthFix'></image>
+      <view class='image-desc-container' ><text class='image-desc' style='font-size:25rpx'>{{item.desc}}</text></view>
+    </view>
+  </block>
 </view>
 

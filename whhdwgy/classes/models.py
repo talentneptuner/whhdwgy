@@ -32,6 +32,7 @@ class ClassOne(models.Model):
 class Prize(models.Model):
     desc = models.CharField(max_length=300,verbose_name='奖项描述')
     p_class = models.ForeignKey(ClassOne,verbose_name='所属班级',on_delete=models.CASCADE)
+    image = models.ImageField(verbose_name='照片',upload_to="prize/%Y/%m",null=True,blank=True)
     addtime = models.DateTimeField(verbose_name="添加时间", default=datetime.now)
 
     class Meta:

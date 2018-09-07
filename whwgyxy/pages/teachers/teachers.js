@@ -22,7 +22,6 @@ Page({
           'Accept': 'application/json'
         },
         success : function (res) {
-          console.log(res.data)
           that.setData({
             list : res.data.teachers,
             name : res.data.title

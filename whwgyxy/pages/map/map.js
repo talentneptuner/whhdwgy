@@ -21,13 +21,12 @@ Page({
 
     var sysinfo = wx.getSystemInfoSync();
     console.log(sysinfo);
-    scr_width = sysinfo.screenWidth;
-    scr_height = sysinfo.screenHeight;
+    scr_width = sysinfo.windowWidth;
+    scr_height = sysinfo.windowHeight;
     this.setData({
       w : scr_width,
       h : scr_height,
     });
-    console.log(scr_width);
 
     var that = this;
     wx.request({
@@ -37,7 +36,6 @@ Page({
         'Accept': 'application/json'
       },
       success: function (res) {
-        console.log(res.data);
         that.setData({
           sightlist: res.data,
         })
@@ -68,7 +66,6 @@ Page({
     wx.setClipboardData({
       data: 'https://720yun.com/t/8554wedgawseg5oqc4?pano_id=FvkBhRqJpUOMU3bT',
       success: function(res){
-        // console.log(res.data)
         wx.showToast({
           title: '链接已复制',
         })

@@ -31,7 +31,7 @@ class getClassInfoView(View):
         prize = Prize.objects.filter(p_class=classinfo)
         reprize = []
         for item in prize:
-            reprize.append(item.desc)
+            reprize.append(dict(desc=item.desc,image='http://localhost:8000/media/' + str(item.image)))
         images = ClassImage.objects.filter(p_class=classinfo)
         imagelist = []
         for item2 in images:

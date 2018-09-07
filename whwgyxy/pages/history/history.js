@@ -13,22 +13,6 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-
-    // var  historylist = [
-    //   {
-    //     id:0,
-    //     date: '2015年5月1日',
-    //     title: '武汉分校成立',
-    //     imgurl: "http://localhost/images/D4.png",
-    //     desc:"北京市海淀外国语实验学校的办学思路从成立之初就十分明确，“外国语”体现了“面向世界，走国际化办学道路”的宗旨；而“实验”则是一种开放的姿态，表达了学校力争成为中国民办基础教育领域开拓者的决心。"
-    //   },
-    //   {
-    //     id: 1,
-    //     date: '2016年6月1日',
-    //     title: '武汉分校',
-    //     imgurl: "http://localhost/images/D5.png",
-    //   }
-    // ];
     wx.request({
       url: 'http://localhost:8000/gethistory/',
       method:'GET',
@@ -36,15 +20,11 @@ Page({
         'content-type': 'application/json'
       },
       success:function(res){
-        console.log(res.data);
         that.setData({
           historylist: res.data,
         })
       }
     })
-    // this.setData({
-    //   historylist:historylist,
-    // });
   
   },
 
