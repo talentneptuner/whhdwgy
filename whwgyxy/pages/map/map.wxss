@@ -13,11 +13,13 @@
   overflow: scroll;
 }
 .name {
+  display: flex;
   background: #eee;
   border: 1rpx solid #ccc;
   border-radius: 2px;
   height: 16px;
-  line-height: 0.5
+  align-items: center;
+  justify-content: center;
 }
 
  @keyframes bounce-up {

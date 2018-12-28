@@ -1,14 +1,11 @@
 <!--pages/map/map.wxml-->
 <view id='mycontainer' class='mycontainer'>
-  <scroll-view class='scrollcontainer' scrollX="true" scrollY="true" style='height:{{h}}px;width:{{w}}px'>
-    <image src='{{imgurl}}' mode='scaleToFill' style='height:{{imageheight}}px;width:{{imagewidth}}px'></image>
-    <!-- <view style="position:absolute;left:800px;top:800px;height:10px;width:10px"></<view> -->
-    <!-- <block wx:for='{{sightlist}}' wx:key="id"> -->
-    <view style="position:absolute;left:{{item.left}}px;top:{{item.top}}px;text-align:center" bindtap='show' wx:for='{{sightlist}}' wx:key="id"  data-name='{{item.name}}' data-id='{{item.id}}' class='animate-bounce-up'>
+  <scroll-view class='scrollcontainer' scrollX="true" scrollY="true" style='height:{{scr_height}}px;width:{{scr_width}}px'>
+    <image bindload='imgLoad' src='{{imgurl}}' mode='scaleToFill' style='height:{{image_height}}px;width:{{image_width}}px'></image>
+    <view style="position:absolute;left:{{item.left/3336 * image_width - width_cut}}px;top:{{item.top / 2480 * image_height - height_cut}}px;text-align:center" bindtap='show' wx:for='{{sightlist}}' wx:key="id"  data-name='{{item.name}}' data-id='{{item.id}}' class='animate-bounce-up'>
     <view style='width:50px' class='name'><text style='font-size:10px'>{{item.name}}</text></view>
     <image style='height:28px;width:16px' src='/images/marker.png'></image>
     </view>
-    <!-- </block> -->
   </scroll-view>
   <view class='vr-go' bindtap='ToVR'><text>VR\n校园</text></view>
 </view>

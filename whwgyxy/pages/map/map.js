@@ -1,7 +1,5 @@
 // pages/map/map.js
-var scr_width
-var scr_height
-
+var is_tablet
 Page({
 
   /**
@@ -9,9 +7,6 @@ Page({
    */
   data: {
     imgurl:'http://www.whfles.com/UploadFiles/SingleNode/201803260908495653.jpg',
-    imageheight : 1240 ,
-    imagewidth : 1683 ,
-  
   },
 
   /**
@@ -21,16 +16,18 @@ Page({
 
     var sysinfo = wx.getSystemInfoSync();
     console.log(sysinfo);
-    scr_width = sysinfo.windowWidth;
-    scr_height = sysinfo.windowHeight;
-    this.setData({
-      w : scr_width,
-      h : scr_height,
-    });
+    var scr_width = sysinfo.windowWidth;
+    var scr_height = sysinfo.windowHeight;
+    if (scr_width > 700 && scr_height > 900){
+      is_tablet = true;
+    }
+    else{
+      is_tablet = false
+    }
 
     var that = this;
     wx.request({
-      url: 'http://localhost:8000/getsights/',
+      url: 'http://39.108.253.48/getsights/',
       method: 'GET',
       header: {
         'Accept': 'application/json'
@@ -71,6 +68,30 @@ Page({
         })
       }
     })
+  },
+
+  imgLoad: function(img){
+    var w = img.detail.width;
+    var h = img.detail.height;
+    var width_cut = 0;
+    var height_cut = 0;
+    if (is_tablet){
+      width_cut = 30;
+      height_cut = 60;
+    }
+    else{
+      width_cut = 30;
+      height_cut = 40;
+    }
+    this.setData({
+      image_width: w / 2,
+      image_height: h / 2,
+      scr_width: w / 2,
+      scr_height: h / 2,
+      width_cut : width_cut,
+      height_cut : height_cut,
+    });
+    
   }
 
   

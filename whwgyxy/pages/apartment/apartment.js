@@ -14,7 +14,7 @@ Page({
   onLoad: function (options) {
     var that = this
     wx.request({
-      url: 'http://localhost:8000/getparts/',
+      url: 'http://39.108.253.48/getparts/',
       method: 'GET',
       header: {
         'content-type': 'application/json'

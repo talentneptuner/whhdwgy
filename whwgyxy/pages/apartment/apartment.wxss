@@ -50,14 +50,22 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+.part-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: left;
   width: 100%;
 }
 .part-node{
-  width: 160px;
+  /* width: 160px; */
+  flex: 0 0 31%;
   float: left;
-  margin: 4px;
-  padding: 1rpx 0;
+  margin: 2px;
+  /* padding: 1rpx 0; */
   border: 1rpx solid #ccc;
   text-align: center;
   border-radius: 10rpx;
