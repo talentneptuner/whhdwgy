@@ -16,7 +16,7 @@ Page({
       var p_id = options.id
       console.log(p_id)
       wx.request({
-        url: 'http://localhost:8000/getteachers/' + 11,
+        url: 'http://39.108.253.48/getteachers/' + 11,
         method: 'GET',
         header: {
           'Accept': 'application/json'

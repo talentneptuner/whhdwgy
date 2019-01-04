@@ -31,7 +31,7 @@ Page({
   ToTeachers : function(res){
     var id = res.currentTarget.dataset.id;
     wx.request({
-      url: 'http://localhost:8000/getteachers/'+id,
+      url: 'http://39.108.253.48/getteachers/'+id,
       method: 'GET',
       header: {
         'Accept': 'application/json'

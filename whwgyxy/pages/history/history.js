@@ -14,7 +14,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'http://localhost:8000/gethistory/',
+      url: 'http://39.108.253.48/gethistory/',
       method:'GET',
       header:{
         'content-type': 'application/json'

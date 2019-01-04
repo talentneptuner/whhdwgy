@@ -15,7 +15,7 @@ Page({
     var that = this
     var id = options.id
     wx.request({
-      url: 'http://localhost:8000/getsightinfo/'+id,
+      url: 'http://39.108.253.48/getsightinfo/'+id,
       method: 'GET',
       header: {
         'Accept': 'application/json'
